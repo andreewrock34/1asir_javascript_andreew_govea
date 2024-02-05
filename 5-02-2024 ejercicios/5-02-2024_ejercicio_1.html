@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+
+	<!-----declarar los sueltos de un empelado y obtener su media------------->
+	<!-----los sueldos que se declaren a un array------->
+<script>
+   //======================Funciones====================================
+   function Proceso(tab_sueldos){
+   	  suma=0;
+      for(const x in tab_sueldos){
+      	if (x >0) {
+      	suma=suma + tab_sueldos[x];
+         }
+       }
+     media=suma / (tab_sueldos.length -1);
+      return(media);
+   }
+
+   function Visualizar(media, tab_sueldos){
+     alert("la media de " + tab_sueldos [0] + " es " + media);
+   }
+
+	//======================Programa principal====================================
+
+	tab_sueldos= [ "Luis", 1000, 2500, 800, 2000 ]
+	resul = Proceso (tab_sueldos);
+    Visualizar (resul, tab_sueldos);
+
+</script>
+</body>
+</html>
