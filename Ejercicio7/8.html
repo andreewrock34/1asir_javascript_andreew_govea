@@ -1,0 +1,49 @@
+<!-------------.-) El mismo ejercicio pero sin botón, es decir al darle a INTRO se
+cambiará no solo el texto del bloque sino también el fondo del mismo, por
+ejemplo en rojo si es negativo y en verde si es positivo.------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificador de Número</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+  	
+   $(document).ready(function() {
+  $("#verificarBtn").click(function() {
+    var numero = parseFloat($("#numeroInput").val());
+    var mensajeElement = $("#mensaje");
+
+    if (!isNaN(numero)) {
+      if (numero > 0) {
+        mensajeElement.text("Positivo").css("background-color", "red");
+      } else if (numero < 0) {
+        mensajeElement.text("Negativo").css("background-color", "green");
+      } else {
+        mensajeElement.text("El número es cero").css("background-color", "transparent");
+      }
+    } else {
+      mensajeElement.text("Por favor ingrese un número válido").css("background-color", "transparent");
+    }
+  });
+});
+
+  </script>
+
+</head>
+<body>
+
+<p>Actividad 8</p>
+
+  <div id="container">
+    <input type="text" id="numeroInput">
+    <button id="verificarBtn">Verificar</button>
+    <div id="mensaje" style="margin-top: 20px; padding: 10px;"></div>
+  </div>
+
+
+</body>
+</html>

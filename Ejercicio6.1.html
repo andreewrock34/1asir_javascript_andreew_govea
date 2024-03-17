@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!----Numero 6, Dados dos números, visualizar su suma si son iguales y su producto si son diferentes ----->
+
+<script>
+
+var num1, num2, suma, producto;
+
+num1=prompt('Ingrese el primer numero:','');
+num1=parseInt(num1);
+ num2=prompt('Ingrese el segundo numero;','');
+num1=parseInt(num2);
+// ------------- Funciones ------------
+function visualizar(n1, n2) {
+  if (n1 == n2) {
+    suma = n1 + n2;
+    alert('La suma es:'+suma);
+  } else{
+    producto = n1 * n2;
+     alert('El producto es:'+producto);
+  }
+}
+
+// ------------- Programa Principal ---------
+visualizar (num1,num2);
+
+
+</script>
+
+</body>
+</html>

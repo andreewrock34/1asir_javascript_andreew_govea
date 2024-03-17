@@ -1,0 +1,43 @@
+<!-------------3.-) Se declara un botón de forma cuando se pulsa aparece una ayuda en
+un bloque separado del botón. Utilizar fadeIn y fadeOut. El texto del botón
+cambiará dependiendo de si la ayuda ha sido visualizada.
+Al principio, el texto del botón será “Pulsa para que aparezca ayuda” y
+después, con la ayuda visualizada “ Pulsa para que desaparezca ayuda”.------------>
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#botton1").click(function(){
+    $("#div1").fadeOut();
+    $("#div2").fadeOut("slow");
+    $("#div3").fadeOut(3000);
+  });
+});
+
+$(document).ready(function(){
+  $("#botton2").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+  });
+});
+
+</script>
+</head>
+<body>
+
+<p>Demonstrate fadeOut() with different parameters.</p>
+
+<button id="botton1">Pulsa para que aparezca ayuda</button><br><br>
+
+<button id="botton2"> Pulsa para que desaparezca ayuda</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+
+</body>
+</html>

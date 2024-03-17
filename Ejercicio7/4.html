@@ -1,0 +1,53 @@
+<!-------------4.-) Se declaran tres botones,
+– cuando se pulsa el primero, se visualiza los 10 primeros números
+enteros positivos, de 1 a 10.
+– cuando se pulsa el segundo, se visualiza los números de 20 a 25
+enteros positivos.
+– cuando se pulsa el tercero, se visualiza los números de 50 a 55
+enteros positivos.------------->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+  $("#div4").click(function(){
+    $("#div1").fadeToggle();
+  });
+});
+
+$(document).ready(function(){
+  $("#div5").click(function(){
+    $("#div2").fadeToggle();
+  });
+});
+
+$(document).ready(function(){
+  $("#div6").click(function(){
+    $("#div3").fadeToggle();
+  });
+});
+
+</script>
+</head>
+<body>
+
+<p>Actividad 4</p>
+
+<button id="div4">Boton1</button><br><br>
+
+<button id="div5">Boton2</button><br><br>
+
+<button id="div6">Boton3</button><br><br>
+
+<div id="div1">1,2,3,4,5,6,7,8,9,10</div>
+<br>
+<div id="div2">20,21,22,23,24,25</div>
+<br>
+<div id="div3">26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,,41,42,43,44,45,46,47,48,49,50</div>
+
+</body>
+</html>
+</html>

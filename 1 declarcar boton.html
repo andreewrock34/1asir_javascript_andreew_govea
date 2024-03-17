@@ -1,0 +1,52 @@
+<!----se declara una arrays con valores numericos, se pide al usuario valor numero a continuacions se informa al usuario si esta o no en el arrays aparece un boton que ponga fin para acabarlo, cuando el usuario pinche en el boton de la pantalla, aparecera 2 columnas de datos, en la izquierda aparecera los valores positivos que halla teclado el usuario---->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+
+<p id="demo"></p>
+
+<script>
+
+//Array con los datos
+
+const tab = [1,2,3,4,5,6,7,8,9,10,11,12,33,56];
+
+let numero = parseInt(prompt("Introduce numero"));
+
+
+
+//FUNCIONES
+//========
+
+function Proceso(numero,tab) {
+   let sw="no esta";
+    for (i = 0; i < tab.length; i++){
+             if (tab[i]==numero){
+    	 	 sw="si";
+    	     }
+    	 }
+    	return sw;
+    }
+
+ function Visualizar(dato){
+ 	if(dato=="si"){
+ 		alert("si encontro");
+        }
+        else{
+        alert("no esta");
+        }
+ }
+
+
+
+resul=Proceso(numero,tab);
+Visualizar(resul);
+
+</script>
+
+</body>
+</html>
+

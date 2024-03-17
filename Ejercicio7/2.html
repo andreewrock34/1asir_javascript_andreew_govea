@@ -1,0 +1,48 @@
+<!-----2.) A partir del ejercicio anterior, añadir una imagen (flecha abajo) en cada
+párrafo, de forma que cuando se pulse en la imagen, se despliega como en el
+primer ejercicio y se cambia la imagen (flecha arriba)---------->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").slideToggle();
+  });
+});
+
+
+function cambia(button) {
+
+    if ("button"){
+     document.getElementById("fotocambia").src="imagenes/flecha_abajo.png";
+       }
+    else{
+     document.getElementById("fotocambia").src="imagenes/flecha_arriba.png";
+     }
+    }
+
+function inicio() {
+    setInterval(cambia,2344);
+}
+
+window.onload=inicio;
+
+</script>
+</head>
+<body>
+
+<p>Freak os leash</p>
+
+<p>Banana Peel</p>
+
+<p>TBlack funeral</p>
+
+<button>Toggle slideUp() and slideDown()</button>
+
+<img id="fotocambia" src="imagenes/flecha_arriba.png"  width="100" height="40">
+
+</body>
+</html>

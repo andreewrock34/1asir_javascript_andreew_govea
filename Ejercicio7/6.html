@@ -1,0 +1,37 @@
+<!-------------6.-) Declarar tres botones con los textos “rojo”, “verde” y “azul” y un bloque
+de un color diferente.
+– Cuando se pulsa el botón con el texto “rojo”, el bloque se pone en rojo.
+– Cuando se pulsa el botón con el texto “verde”, el bloque se pone en
+verde.
+– Cuando se pulsa el botón con el texto “azul”, el bloque se pone en azul.------------->
+
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="stylesheet" href="css-html/ejer7.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+
+const redButton = document.getElementById('redButton');
+const blueButton = document.getElementById('blueButton');
+const colorSquare = document.getElementById('colorDiv');
+redButton.addEventListener('click', (e) => {
+    colorSquare.style.backgroundColor = 'red';
+});
+blueButton.addEventListener('click', (e) => {
+    colorSquare.style.backgroundColor = 'blue';
+});
+
+</script>
+</head>
+<body>
+
+<p>Actividad 6</p>
+
+<button type="button" id="redButton">Click Me!</button>
+<button type="button" id="blueButton">Click Me!</button>
+<div id="colorDiv"></div>
+
+
+</body>
+</html>
